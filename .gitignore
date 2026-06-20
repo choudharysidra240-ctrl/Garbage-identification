@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Dataset files
+*.h5
+*.hdf5
+*.ckpt
+*.pkl
+*.npz
+*.npy
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Logs and outputs
+logs/
+outputs/
+checkpoints/
