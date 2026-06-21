@@ -1,34 +1,44 @@
 # Garbage Identification Project
 
 ## Overview
-This project uses deep learning to classify different types of garbage and waste materials.
+This project uses YOLOv8 for object detection to identify and classify garbage items in images.
 
 ## Features
-- Image classification of garbage types
-- Web interface using Streamlit
-- TensorFlow deep learning model
+- Object Detection: Detects multiple garbage items per image
+- 12 Classes: Consolidated from TACO dataset (59 raw classes)
+- Web Interface: Gradio-based UI for easy testing
+- Fast Inference: YOLOv8 optimized for real-time detection
+
+## Classes
+1. Cardboard
+2. Glass
+3. Metal
+4. Paper
+5. Plastic
+6. Trash
+7. Bottle
+8. Can
+9. Wrapper
+10. Cup
+11. Bag
+12. Container
 
 ## Installation
+
 ```bash
+git clone https://github.com/choudharysidra240-ctrl/Garbage-identification.git
+cd Garbage-identification
 pip install -r requirements.txt
 ```
 
 ## Usage
+
+### Run Gradio App
 ```bash
-streamlit run app.py
+python app.py
 ```
 
-## Dataset
-The model is trained on various garbage categories including:
-- Cardboard
-- Glass
-- Metal
-- Paper
-- Plastic
-- Trash
-
-## Model Architecture
-- Convolutional Neural Network
-- 6 classes
-- 224x224 input size
-- Transfer learning from MobileNetV2
+### Run Jupyter Notebook
+```bash
+jupyter notebook notebooks/training.ipynb
+```

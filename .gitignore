@@ -23,6 +23,12 @@ venv.bak/
 *.rar
 *.7z
 
+# Model files
+*.pt
+*.pth
+*.onnx
+*.engine
+
 # IDE
 .vscode/
 .idea/
@@ -36,3 +42,5 @@ venv.bak/
 logs/
 outputs/
 checkpoints/
+mlruns/
+mflowdb/

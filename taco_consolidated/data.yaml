@@ -1,0 +1,19 @@
+path: ../taco_consolidated
+train: train/images
+val: val/images
+test: test/images
+
+nc: 12
+names:
+  0: cardboard
+  1: glass
+  2: metal
+  3: paper
+  4: plastic
+  5: trash
+  6: bottle
+  7: can
+  8: wrapper
+  9: cup
+  10: bag
+  11: container
