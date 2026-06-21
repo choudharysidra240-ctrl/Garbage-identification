@@ -1,36 +1,18 @@
 import gradio as gr
-import cv2
-import numpy as np
 from ultralytics import YOLO
-from PIL import Image
+import cv2
 
-# Load the trained model
 model = YOLO("yolov8n.pt")
 
-def detect_trash(image):
-    """
-    Detect garbage items in an image
-    Args:
-        image: Input image
-    Returns:
-        Annotated image with bounding boxes
-    """
-    # Run inference
+def detect_garbage(image):
     results = model(image)
-    # Annotate image
-    annotated_image = results[0].plot()
-    return annotated_image
+    return results[0].plot()
 
-# Create Gradio interface
 iface = gr.Interface(
-    fn=detect_trash,
-    inputs=gr.Image(type="numpy", label="Upload Image"),
-    outputs=gr.Image(type="numpy", label="Detected Garbage"),
-    title="Garbage Detection System",
-    description="Upload an image to detect and classify garbage items using YOLOv8",
-    examples=[],
-    allow_flagging="never"
+    fn=detect_garbage,
+    inputs=gr.Image(type="numpy"),
+    outputs=gr.Image(type="numpy"),
+    title="Garbage Detection System"
 )
 
-if __name__ == "__main__":
-    iface.launch(share=True, debug=True)
+iface.launch(share=True)

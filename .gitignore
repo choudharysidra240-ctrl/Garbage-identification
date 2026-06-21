@@ -1,46 +1,16 @@
-# Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Dataset files
-*.h5
-*.hdf5
-*.ckpt
-*.pkl
-*.npz
-*.npy
-*.zip
-*.tar.gz
-*.tgz
-*.rar
-*.7z
-
-# Model files
 *.pt
 *.pth
-*.onnx
-*.engine
-
-# IDE
+*.h5
+*.zip
+venv/
+env/
 .vscode/
 .idea/
-*.swp
-*.swo
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-
-# Logs and outputs
-logs/
-outputs/
-checkpoints/
+*.ipynb_checkpoints/
 mlruns/
-mflowdb/
+runs/
+models/
+*.jpg
+*.png
